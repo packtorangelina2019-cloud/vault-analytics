@@ -9,13 +9,13 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        <nav style={{background:'black',color:'white',padding:'1rem'}}>
-          <div style={{maxWidth:'1200px',margin:'0 auto',display:'flex',justifyContent:'space-between'}}>
-            <Link href="/" style={{fontSize:'1.5rem',fontWeight:'bold',color:'#ffd700'}}>VAULT</Link>
-            <div>
-              <Link href="/feed" style={{marginRight:'1rem',color:'white'}}>Live Feed</Link>
-              <Link href="/tools" style={{color:'white'}}>Tools</Link>
+      <body className="bg-black text-white min-h-screen">
+        <nav className="bg-black border-b border-gray-800 p-4">
+          <div className="container mx-auto flex justify-between items-center">
+            <Link href="/" className="text-2xl font-bold text-yellow-500">VAULT</Link>
+            <div className="space-x-6">
+              <Link href="/feed" className="hover:text-yellow-500 transition">Live Feed</Link>
+              <Link href="/tools" className="hover:text-yellow-500 transition">Tools</Link>
             </div>
           </div>
         </nav>
