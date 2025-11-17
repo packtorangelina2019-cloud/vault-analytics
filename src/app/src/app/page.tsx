@@ -1,7 +1,6 @@
-'use client';
 import Link from 'next/link';
 
-export default function Home() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-8">
       <h1 className="text-6xl font-bold text-yellow-500 mb-4">VAULT ANALYTICS</h1>
