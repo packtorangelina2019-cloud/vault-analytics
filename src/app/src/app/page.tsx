@@ -1,13 +1,24 @@
+'use client';
 import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div style={{minHeight:'100vh',background:'black',color:'white',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',padding:'2rem'}}>
-      <h1 style={{fontSize:'4rem',fontWeight:'bold',color:'#ffd700',marginBottom:'1rem'}}>VAULT ANALYTICS</h1>
-      <p style={{fontSize:'1.25rem',marginBottom:'2rem',color:'#ccc'}}>Sharp Tools for Sharp Bettors</p>
-      <div>
-        <Link href="/feed" style={{background:'#ffd700',color:'black',padding:'0.75rem 1.5rem',borderRadius:'0.5rem',fontWeight:'bold',marginRight:'1rem'}}>Live Feed</Link>
-        <Link href="/tools" style={{background:'#333',color:'white',padding:'0.75rem 1.5rem',borderRadius:'0.5rem',border:'1px solid #555'}}>Tools</Link>
+    <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-8">
+      <h1 className="text-6xl font-bold text-yellow-500 mb-4">VAULT ANALYTICS</h1>
+      <p className="text-xl mb-8 text-gray-300">Sharp Tools for Sharp Bettors</p>
+      <div className="space-x-6">
+        <Link 
+          href="/feed" 
+          className="inline-block bg-yellow-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition"
+        >
+          Live Feed
+        </Link>
+        <Link 
+          href="/tools" 
+          className="inline-block bg-gray-800 text-white px-8 py-4 rounded-lg font-bold text-lg border border-gray-600 hover:bg-gray-700 transition"
+        >
+          Tools
+        </Link>
       </div>
     </div>
   );
